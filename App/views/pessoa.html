@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <title>Pessoas</title>
+</head>
+<body>
+    <div class="col-md-8">
+        <div>
+            <h1 class="mt-5">Lista de Clientes</h1>
+            
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">E-mail</th>
+                        
+                       
+                    </tr>
+                </thead>
+                <tbody> 
+                    <?php 
+                        foreach($pessoas as $pessoa) {
+                    ?>
+                            <tr>
+                                <th scope='row'><?php echo $pessoa['id']; ?></th>
+                                <th scope='row'><?php echo $pessoa['nome']; ?></th>
+                                <th scope='row'><?php echo $pessoa['email']; ?></th>
+                                <th scope='row'><?php echo $pessoa['endereco']; ?></th>
+                                
+                            </tr>
+                    <?php 
+                        }
+                    ?> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

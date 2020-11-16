@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+
+    <title>Estadão - Últimas Notícias</title>
+    
+</head>
+<body style="background-color:rgb(29, 28, 28);">
+    <div class="container" ><br>
+                <h1 style="color:white;">Estadão - Últimas Notícias</h1><br>
+            
+                    <ul>
+                        <?php foreach($noticias as $noticia) { ?>
+             <li style="color:white;"><a style="color:white;" href="<?php echo 'http://localhost/noticias/portal/noticia/' . $noticia['titulo_url']; ?>"><?php echo $noticia['titulo']; ?></a></li>
+                       <?php } ?>
+                    </ul>
+               
+            
+    </div>
+</body>
+</html>
